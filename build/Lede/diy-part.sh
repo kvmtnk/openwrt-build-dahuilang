@@ -68,7 +68,7 @@ export Disable_autosamba="0"                 # 去掉源码默认自选的luci-a
 # uci set luci.main.mediaurlbase='/luci-static/neobird' && uci commit luci
  # 启动18.06Luci
 #sed -i 's@src-git luci@# src-git luci@g' feeds.conf.default
-
+sed -i '$a src-git smpackage https://github.com/kenzok8/small-package' feeds.conf.default
 #rm -rf feeds/packages/lang/golang
 #git clone https://github.com/sbwml/packages_lang_golang -b 21.x feeds/packages/lang/golang
 
